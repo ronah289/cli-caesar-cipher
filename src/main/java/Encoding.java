@@ -27,10 +27,7 @@ public class Encoding {
             else if(individualLetters > 'Z'){
                 individualLetters = (char) (individualLetters+'A'-'Z'-1);
             }
-            encodedText = encodedText + individualLetters;
-//            else {
-//                encodedText = encodedText + individualLetters;
-//            }
+            encodedText = String.format("%s%s", encodedText, individualLetters);
         }
         return encodedText;
     }
