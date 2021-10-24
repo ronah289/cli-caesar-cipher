@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class EncodingTest {
-    Encoding testValues = new Encoding(2,"abcd");
+    Encoding testValues = new Encoding(2,"the");
 
     @Test
     void getKey() {
@@ -17,11 +17,11 @@ class EncodingTest {
 
     @Test
     void getInput() {
-        assertEquals("CDEF",testValues.getInput());
+        assertEquals("VJG",testValues.getInput());
     }
 
     @Test
     void setInput() {
-        assertEquals("CDEF",testValues.setInput(testValues.getInput()));
+        assertEquals("VJG",testValues.setInput(testValues.getInput()));
     }
 }
