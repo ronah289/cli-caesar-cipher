@@ -17,11 +17,11 @@ class EncodingTest {
 
     @Test
     void getInput() {
-        assertEquals("abcd",testValues.getInput());
+        assertEquals("CDEF",testValues.getInput());
     }
 
     @Test
     void setInput() {
-        assertEquals("abcd",testValues.setInput(testValues.getInput()));
+        assertEquals("CDEF",testValues.setInput(testValues.getInput()));
     }
 }
