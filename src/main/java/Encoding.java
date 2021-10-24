@@ -17,24 +17,22 @@ public class Encoding {
     }
 
     public String getInput() {
-        String checkInput = "";
-        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-        if(input.matches("[A-Z ]+")){
-//            checkInput = input;
-            char outputValues = ' ';
-            for(int x = 0;x< input.length();x++){
-                if(input.charAt(x) >='A' && input.charAt(x)<='Z'){
-                    outputValues = alphabet.charAt((x+key)%26);
-                }
-                checkInput = checkInput+ outputValues;
+        String encodedText = "";
+        char individualLetters;
+        for(int x = 0; x < input.length(); x++){
+            individualLetters = input.charAt(x);
+            if(individualLetters >= 'A' && individualLetters <= 'Z'){
+                individualLetters = (char) (individualLetters + key);
             }
-
+            else if(individualLetters > 'Z'){
+                individualLetters = (char) (individualLetters+'A'-'Z'-1);
+            }
+            encodedText = encodedText + individualLetters;
+//            else {
+//                encodedText = encodedText + individualLetters;
+//            }
         }
-        else {
-            checkInput = "check your string";
-        }
-        return checkInput;
+        return encodedText;
     }
 
     public String setInput(String input) {
