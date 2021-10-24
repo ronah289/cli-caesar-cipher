@@ -12,7 +12,6 @@ public class Decoding {
     }
 
     public String getEncodedText() {
-        /////
         String decodedMessage = "";
         for(int y = 0; y< encodedText.length(); y++){
             char decodeLetters = encodedText.charAt(y);
@@ -25,8 +24,6 @@ public class Decoding {
             decodedMessage = String.format("%s%s", decodedMessage, decodeLetters);
 
         }
-        ////
-        System.out.println(decodedMessage);
         return decodedMessage;
     }
 
