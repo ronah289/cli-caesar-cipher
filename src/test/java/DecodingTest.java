@@ -16,11 +16,11 @@ class DecodingTest {
 
     @Test
     void getEncodedText() {
-        assertEquals("xyz",testDecoding.getEncodedText());
+        assertEquals("UVW",testDecoding.getEncodedText());
     }
 
     @Test
     void setEncodedText() {
-        assertEquals("xyz",testDecoding.setEncodedText(testDecoding.getEncodedText()));
+        assertEquals("UVW",testDecoding.setEncodedText(testDecoding.getEncodedText()));
     }
 }
