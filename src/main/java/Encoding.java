@@ -4,7 +4,7 @@ public class Encoding {
 
     public Encoding(int newKey,String newInput){
         key = newKey;
-        input = newInput;
+        input = newInput.toUpperCase();
     }
 
     public int getKey() {
@@ -18,8 +18,18 @@ public class Encoding {
 
     public String getInput() {
         String checkInput = "";
-        if(input.matches("[a-zA-Z]+")){
-            checkInput = input;
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        if(input.matches("[A-Z ]+")){
+//            checkInput = input;
+            char outputValues = ' ';
+            for(int x = 0;x< input.length();x++){
+                if(input.charAt(x) >='A' && input.charAt(x)<='Z'){
+                    outputValues = alphabet.charAt((x+key)%26);
+                }
+                checkInput = checkInput+ outputValues;
+            }
+
         }
         else {
             checkInput = "check your string";
