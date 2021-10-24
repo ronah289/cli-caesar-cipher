@@ -18,9 +18,9 @@ public class Decoding {
             char decodeLetters = encodedText.charAt(y);
             if(decodeLetters >= 'A' && decodeLetters <= 'Z'){
                 decodeLetters = (char) (decodeLetters - decodingKey);
-            }
-            else if(decodeLetters < 'A'){
-                decodeLetters = (char) (decodeLetters-'A'+'Z'+1);
+                if(decodeLetters < 'A'){
+                    decodeLetters = (char) (decodeLetters-'A'+'Z'+1);
+                }
             }
             decodedMessage = String.format("%s%s", decodedMessage, decodeLetters);
 
