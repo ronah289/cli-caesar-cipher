@@ -23,9 +23,9 @@ public class Encoding {
             individualLetters = input.charAt(x);
             if(individualLetters >= 'A' && individualLetters <= 'Z'){
                 individualLetters = (char) (individualLetters + key);
-            }
-            else if(individualLetters > 'Z'){
-                individualLetters = (char) (individualLetters+'A'-'Z'-1);
+                if(individualLetters > 'Z'){
+                    individualLetters = (char) (individualLetters+'A'-'Z'-1);
+                }
             }
             encodedText = String.format("%s%s", encodedText, individualLetters);
         }
