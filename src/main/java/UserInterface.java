@@ -7,14 +7,12 @@ public class UserInterface {
         System.out.println("Enter your message\n");
         String inputText = inputs.nextLine();
         System.out.println("Enter your key");
-        Integer keyValue = inputs.nextInt();
+        int keyValue = inputs.nextInt();
         Encoding calculateEncoding = new Encoding(keyValue,inputText);
         Decoding calculateOutput = new Decoding(calculateEncoding.getKey(),calculateEncoding.getInput());
-        System.out.println("INPUT:\t"+inputText.toUpperCase());
-        System.out.println("ENCODED TEXT:\t"+calculateEncoding.getInput());
-        System.out.println("Decoded:"+calculateOutput.getEncodedText());
-//        System.out.println();
-//        System.out.println(keyValue);
+        System.out.println("Input String: "+inputText.toUpperCase());
+        System.out.println("Encrypted String: "+calculateEncoding.getInput());
+        System.out.println("Decrypted String: "+calculateOutput.getEncodedText());
     }
 
 }
