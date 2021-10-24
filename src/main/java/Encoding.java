@@ -3,7 +3,7 @@ public class Encoding {
     private String input;
 
     public Encoding(int newKey,String newInput){
-        key = newKey;
+        key = newKey % 26;
         input = newInput.toUpperCase();
     }
 
