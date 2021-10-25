@@ -9,7 +9,7 @@ public class UserInterface {
         int keyValue = inputs.nextInt();
         Encoding calculateEncoding = new Encoding(keyValue,inputText);
         Decoding calculateOutput = new Decoding(calculateEncoding.getKey(),calculateEncoding.getInput());
-        System.out.println("Caesar Cipher\n");
+        System.out.println("Caesar Cipher");
         System.out.println("______________________");
         System.out.println("Input String: "+inputText.toUpperCase());
         System.out.println("Encrypted String: "+calculateEncoding.getInput());
