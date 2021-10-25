@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class UserInterface {
+public class App {
     public static void main(String[] args){
         Scanner inputs =new Scanner(System.in);
         System.out.println("Enter your message\n");
