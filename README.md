@@ -25,7 +25,7 @@ to clone to your machine.
 ## Technologies Used
 
 * Java (version 11)
-* Gradle (4.4.1)
+* Gradle (7.1)
 
 
 ## License Information
